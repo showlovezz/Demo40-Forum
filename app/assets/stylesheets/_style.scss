@@ -9,6 +9,7 @@ body{
 				.forum{
 					border: 1px solid #000;
 					padding: 10px 10px 0px 10px;
+					background-color: #fff;
 					.forum-item{
 						.col-3{
 							img{
@@ -23,6 +24,26 @@ body{
 						border: 0.8px dashed  #DCDCDC;
 						margin-top: 10px;
 						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#section_forum_form{
+	.container{
+		.row{
+			.col-10{
+				background-color: #fff;
+				padding: 20px 20px 10px 20px;
+				border-radius: 10px;
+				.form-group{
+					.form-control{
+						background-color: #DCDCDC;
+					}
+					.custom-file-label{
+						background-color: #DCDCDC;
 					}
 				}
 			}

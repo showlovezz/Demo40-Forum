@@ -1,30 +1,45 @@
-<%= form_for @post do |f| %>
+<section id="section_forum_form">
+	<div class="container">
+		<div class="row">
+			<div class="col-10 offset-1">
+				
+				<%= form_for @post do |f| %>
 	
-	<% if @post.errors.any? %>
-    <h2>We have some errors here !</h2>
-    <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
+					<% if @post.errors.any? %>
+				    <h2>We have some errors here !</h2>
+				    <ul>
+				      <% @post.errors.full_messages.each do |msg| %>
+				        <li><%= msg %></li>
+				      <% end %>
+				    </ul>
+				  <% end %>
 
-  <%= f.label :image, "Photo" %>
-  <%= image_tag @post.image.url, width: '300px' if @post.image? %>
-  <%= f.file_field :image %>
+					<div class="form-group">
+						<span class="text-danger">*</span>
+						<%= f.label :title, "文章標題：" %>
+						<%= f.text_field :title, class: "form-control" %>
+					</div>
 
-	<div class="form-group">
-		<%= f.label :title, "Title：" %>
-		<%= f.text_field :title %>
+					<div class="form-group">
+						<span class="text-danger">*</span>
+						<%= f.label :content, "文章內容：" %>
+						<%= f.text_area :content,rows: "18", class: "form-control" %>
+					</div>
+
+					<div class="form-group">
+						<div class="custom-file">
+						  <%= f.file_field :image,class: "custom-file-input" %>
+						  <%= f.label :image, "Photo",class: "custom-file-label" %>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<%= f.submit class: "btn btn-success btn-lg" %>
+					</div>
+
+				<% end %>
+
+			</div>
+		</div>
 	</div>
-
-	<div class="form-group">
-		<%= f.label :content, "Content：" %>
-		<%= f.text_area :content %>
-	</div>
-
-	<div class="form-group">
-		<%= f.submit %>
-	</div>
-
-<% end %>
+</section>
