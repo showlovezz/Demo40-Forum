@@ -1,5 +1,6 @@
 body{
 	background-color: #FFF5EE;
+	font-family: ""微軟正黑體;
 }
 
 #section_forum_index{
@@ -45,6 +46,26 @@ body{
 					.custom-file-label{
 						background-color: #DCDCDC;
 					}
+				}
+			}
+		}
+	}
+}
+
+#section_forum_show{
+	.container{
+		.row{
+			.col-10{
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 10px;
+				border: 1px solid;
+				.img{
+					width: 600px;
+					height: 370px;
+				}
+				.text-size{
+					font-size: 20px;
 				}
 			}
 		}
