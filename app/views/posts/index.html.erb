@@ -3,6 +3,7 @@
 <% @posts.each do |post| %>
 	<ul>
 		<li>
+			<%= image_tag post.image.url %>
 			<%= post.title %>
 			<%= post.content %>
 			Published at <%= time_ago_in_words(post.created_at) %> ago -
