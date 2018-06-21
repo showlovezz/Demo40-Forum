@@ -1,16 +1,27 @@
-<h1>Index Page</h1>
-
-<% @posts.each do |post| %>
-	<ul>
-		<li>
-			<%= image_tag post.image.url %>
-			<%= post.title %>
-			<%= post.content %>
-			Published at <%= time_ago_in_words(post.created_at) %> ago -
-			by <%= post.user.email.split("@").first %>
-			<%= link_to "Show", post_path(post) %>
-			<%= link_to "Edit", edit_post_path(post) %>
-			<%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"} %>
-		</li>
-	</ul>
-<% end %>
+<section id="section_forum_index">
+	<div class="container">
+		<div class="row">
+			<div class="col-10 offset-1">
+				
+				<div class="forum">
+					<% @posts.each do |post| %>
+						<div class="row forum-item">
+							<div class="col-3">
+								<%= image_tag post.image.url, class: "img" %>
+							</div>
+							<div class="col-9">
+								<h3 class="mb-4"><%= link_to post.title, post_path(post),class: "text-info" %></h3>
+								<p>
+									<%= truncate(post.content, length: 160) %>
+									<%= link_to "繼續閱讀", post_path(post), class: "badge badge-info" %>
+								</p>
+							</div>
+						</div>
+						<hr>
+					<% end %>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>

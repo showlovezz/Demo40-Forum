@@ -1,3 +1,31 @@
 body{
 	background-color: #FFF5EE;
 }
+
+#section_forum_index{
+	.container{
+		.row{
+			.col-10{
+				.forum{
+					border: 1px solid #000;
+					padding: 10px 10px 0px 10px;
+					.forum-item{
+						.col-3{
+							img{
+								height: 220px;
+								width: 220px;
+								background-repeat: no-repeat;
+							}
+						}
+					}
+					hr{
+						width: 100%;
+						border: 0.8px dashed  #DCDCDC;
+						margin-top: 10px;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
