@@ -82,3 +82,19 @@ body{
 		}
 	}
 }
+
+#section_devise{
+	.container{
+		.row{
+			.col-4{
+				background-color: #fff;
+				border-radius: 5px;
+				margin-top: 80px;
+				padding: 20px;
+				.form-control{
+					background-color: #DCDCDC;
+				}
+			}
+		}
+	}
+}
