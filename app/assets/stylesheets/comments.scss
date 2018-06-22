@@ -1,0 +1,17 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div{
+	h6{
+		margin-bottom: 5px;
+	}
+	p{
+		display: inline-block;
+		margin-bottom: 0;
+	}
+}
+
+.comment_hr{
+	border: 0.8px dashed  #DCDCDC;
+}

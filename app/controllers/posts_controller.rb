@@ -21,6 +21,8 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		@comment = Comment.new
+		@comments = @post.comments.order("created_at DESC")
 	end
 
 	def edit
@@ -28,7 +30,7 @@ class PostsController < ApplicationController
 
 	def update
 		if @post.update(post_params)
-			redirect_to posts_path, notice: "文章修改成功"
+			redirect_to post_path, notice: "文章修改成功"
 		else
 			render "edit", alert: "文章修改失敗"
 		end

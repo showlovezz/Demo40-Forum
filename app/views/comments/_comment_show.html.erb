@@ -1,0 +1,11 @@
+<% @comments.each do |comment| %>
+	<div>
+		<h6><%= comment.user.email.split("@").first %></h6>
+		<p><%= simple_format comment.content %></p>
+		<p class="text-muted">
+			<em><%= comment.created_at %></em>
+		</p>
+		<%= link_to "Delete", post_comment_path(@post, comment), method: :delete, class: "float-right btn btn-danger btn-sm" %>
+	</div>
+	<hr class="comment_hr">
+<% end %>
