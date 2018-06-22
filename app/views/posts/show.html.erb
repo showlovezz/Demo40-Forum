@@ -15,7 +15,9 @@
 					Published at <%= time_ago_in_words(@post.created_at) %> ago -
 					by <%= @post.user.email.split("@").first %>
 				</p>
-				<%= image_tag @post.image.url, class: "rounded mx-auto d-block img img-fluid" %>
+				<% if @post.image.attached? %>
+					<%= image_tag @post.image, class: "rounded mx-auto d-block img img-fluid" %>
+				<% end %>
 				<div class="mt-3 text-size">
 					<%= simple_format @post.content %>
 				</div>
