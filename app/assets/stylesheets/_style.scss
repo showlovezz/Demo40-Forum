@@ -8,8 +8,9 @@ body{
 		.row{
 			.col-10{
 				.forum{
-					border: 1px solid #000;
+					border: 1px solid #DCDCDC;
 					padding: 10px 10px 0px 10px;
+					border-radius: 5px;
 					background-color: #fff;
 					.forum-item{
 						.col-3{
@@ -58,14 +59,17 @@ body{
 			.col-10{
 				background-color: #fff;
 				padding: 20px;
-				border-radius: 10px;
-				border: 1px solid;
+				border-radius: 5px;
+				border: 1px solid #DCDCDC;
 				.img{
 					width: 600px;
 					height: 370px;
 				}
 				.text-size{
 					font-size: 20px;
+				}
+				.text-muted{
+					font-size: 12px;
 				}
 			}
 		}
