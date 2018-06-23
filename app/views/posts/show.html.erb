@@ -15,16 +15,16 @@
 					Published at <%= time_ago_in_words(@post.created_at) %> ago -
 					by <%= @post.user.email.split("@").first %>
 				</p>
-				<% if @post.image.attached? %>
-					<%= image_tag @post.image, class: "rounded mx-auto d-block img img-fluid" %>
-				<% end %>
+				<%= image_tag @post.image.url, class: "rounded mx-auto d-block img img-fluid" %>
 				<div class="mt-3 text-size">
 					<%= simple_format @post.content %>
 				</div>
 
 				<h5><%= @post.comments.count %> 則評語</h5>
 				<%= render "comments/comment_show" %>
-				<%= render "comments/comment_form" %>
+				<% if user_signed_in? %>
+					<%= render "comments/comment_form" %>
+				<% end %>
 
 			</div>
 		</div>
